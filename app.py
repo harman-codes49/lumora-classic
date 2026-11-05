@@ -1,6 +1,7 @@
 import streamlit as st
 
 from app.database.db import initialize_database
+from app.database.seed import seed_if_empty
 
 from app.ui.chat import render_chat
 from app.ui.memories import render_memories
@@ -28,6 +29,7 @@ st.set_page_config(
 # =========================================================
 
 initialize_database()
+seed_if_empty()
 
 
 # =========================================================
